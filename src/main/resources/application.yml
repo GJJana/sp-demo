@@ -23,7 +23,7 @@ spring:
                   certificate-location: "classpath:credentials/public.cer"
             identityprovider:
               singlesignon:
-                sign-request: false
+                sign-request: true
               entity-id: https://samltest.id/saml/idp
               sso-url: https://samltest.id/idp/profile/SAML2/Redirect/SSO
               metadata-uri: https://samltest.id/saml/idp
