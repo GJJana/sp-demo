@@ -16,7 +16,7 @@ spring:
     saml2:
       relyingparty:
         registration:
-          samlexample:
+          samlexample1:
             signing:
               credentials:
                 - private-key-location: "classpath:credentials/private.key"
@@ -27,5 +27,19 @@ spring:
               entity-id: https://samltest.id/saml/idp
               sso-url: https://samltest.id/idp/profile/SAML2/Redirect/SSO
               metadata-uri: https://samltest.id/saml/idp
+          samlexample2:
+            signing:
+              credentials:
+                - private-key-location: "classpath:credentials/private.key"
+                  certificate-location: "classpath:credentials/public.cer"
+            identityprovider:
+              singlesignon:
+                sign-request: true
+              entity-id: https://samltest.id/saml/idp
+              sso-url: https://samltest.id/idp/profile/SAML2/Redirect/SSO
+              metadata-uri: https://samltest.id/saml/idp
+
+
+
 #              verification.credentials:
 #                - certificate-location: "classpath:credentials/identity-provider-certificate.crt"
